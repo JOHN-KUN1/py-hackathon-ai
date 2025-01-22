@@ -12,7 +12,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-api_key = os.getenv('API_KEY')
+api_key = os.environ.get('API_KEY')
 # Initialize your LLM and required components
 def initialize_llm():
     documents = SimpleDirectoryReader("./data").load_data()
